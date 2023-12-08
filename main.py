@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "vikrams-fast-facts"
 
 def clean_string(ipstr:str)->str:
-    return " ".join(ipstr.lower().split()).capitalize()
+    return " ".join(ipstr.lower().split()).title()
 
 fast_facts = "data/Fast Facts.xlsx - Sheet1.csv"
 facts = defaultdict(lambda: defaultdict(str))

@@ -75,5 +75,15 @@ caption {
   box-shadow: 0 0px #666;
 }
 
-.factInput { font-weight: bold; display:block; }
-.factAnswer { font-size: smaller; }
+.factInput {
+  font-weight: bold;
+  display: block;
+}
+
+.factAnswer {
+  font-size: smaller;
+}
+
+.WrongAnswer {
+  background-color: rgb(189, 52, 52);
+}
