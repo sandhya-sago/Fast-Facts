@@ -1,0 +1,79 @@
+html {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #454545;
+}
+
+h1,
+p {
+  color: #DDDDDD;
+}
+
+input {
+  background-color: #DEDEDE;
+  height: 30px;
+}
+
+button {
+  margin: 5px;
+  background-color: #878787;
+  padding: 15px;
+  border-radius: 24%;
+  border: None;
+  color: #232323;
+  transition: 0.25s;
+  box-shadow: 0 4px rgb(221, 40, 40);
+}
+
+button:hover {
+  background-color: #ABABAB;
+}
+
+button:active {
+  background-color: rgb(189, 52, 52);
+  box-shadow: 0 0px #666;
+  transform: translateY(4px);
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td,
+th {
+  border: 1px solid #454545;
+  padding: 20px 20px;
+}
+
+th {
+  background-color: #787878;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: #454545;
+}
+
+tr:nth-child(odd) td {
+  background-color: #878787;
+}
+
+caption {
+  padding: 10px;
+}
+
+.timer[data-countdown ^="-"] {
+  background-color: rgb(189, 52, 52);
+  box-shadow: 0 0px #666;
+}
+
+.factInput { font-weight: bold; display:block; }
+.factAnswer { font-size: smaller; }

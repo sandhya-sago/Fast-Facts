@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Knowledge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+
+    <form id="factsForm">
+        {{ form.hidden_tag() }}
+        <table>
+            <thead>
+                <tr>
+                    <td colspan="2"></td>
+                    {% for top in topics %}
+                    <th scope="col" id="topic_1">{{ top }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <br>
+            <tbody>
+                {% for l in letters %}
+                <tr>
+                    <th colspan="2" scope="row" id="letter_1">{{ l }}</th>
+                    {% for top in topics %}
+                    <td>
+                        <span class="factInput">{{ form[top ~ '_' ~ l]() }}</span>
+                        <span class="factAnswer" id="{{ top ~ '_' ~ l ~ '_answer'}}"></span>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {{ form.submit() }}
+    </form>
+    <form>
+        <button formaction="{{url_for('index')}}">Reset Test</button>
+    </form>
+    <p>
+        <button onclick="resetTimer()">Reset Timer</button>
+        <span id="timer" data-countdown="300" class="timer">5:00</div>
+    </p>
+
+</body>
+
+</html>
