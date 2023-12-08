@@ -18,8 +18,9 @@
                 <tr>
                     <td colspan="2"></td>
                     {% for top in topics %}
-                    <th scope="col" id="topic_1">{{ top }}</th>
+                    <th scope="col">{{ top }}</th>
                     {% endfor %}
+                    <th scope="col">Letter Score</th>
                 </tr>
             </thead>
             <br>
@@ -33,8 +34,16 @@
                         <span class="factAnswer" id="{{ top ~ '_' ~ l ~ '_answer'}}"></span>
                     </td>
                     {% endfor %}
+                    <td id="{{ l ~ '_score'  }}"/>
                 </tr>
                 {% endfor %}
+                <tr>
+                    <th colspan="2" scope="row">Topic Score</th>
+                    {% for top in topics %}
+                    <td id="{{ top ~ '_score'}}"/>
+                    {% endfor %}
+                    <td id="total_score"/>
+                </tr>
             </tbody>
         </table>
         {{ form.submit() }}
