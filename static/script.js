@@ -1,4 +1,3 @@
-const TIME_GIVEN = 5; // Min
 const TIMER_UPDATE = 1;  // Sec
 
 
@@ -15,10 +14,10 @@ window.setInterval(() => {
 
 }, TIMER_UPDATE * 1000);
 
-const resetTimer = () => {
+const resetTimer = (time_given) => {
     const timer = document.getElementById('timer');
-    timer.innerHTML = TIME_GIVEN + ":" + "00";
-    timer.dataset.countdown = TIME_GIVEN * 60;
+    timer.innerHTML = time_given + ":" + "00";
+    timer.dataset.countdown = time_given * 60;
 };
 
 const score = async (event) => {

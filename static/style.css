@@ -87,3 +87,18 @@ caption {
 .WrongAnswer {
   background-color: rgb(189, 52, 52);
 }
+
+.TopicCheckboxes:before {
+  vertical-align: middle;
+  position: relative;
+}
+
+.TopicCheckboxes {
+  text-align: left;
+}
+
+.TopicSelection {
+  max-width: max-content;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
