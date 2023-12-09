@@ -1,17 +1,8 @@
 html {
   font-family: sans-serif;
   text-align: center;
-  background-color: #454545;
-}
-
-h1,
-p {
-  color: #DDDDDD;
-}
-
-input {
-  background-color: #DEDEDE;
-  height: 30px;
+  background-color: lightgray;
+  line-height: 150%;
 }
 
 button {
