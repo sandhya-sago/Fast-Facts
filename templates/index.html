@@ -32,28 +32,31 @@
                     <td>
                         <span class="factInput">{{ form[top ~ '_' ~ l]() }}</span>
                         <span class="factAnswer" id="{{ top ~ '_' ~ l ~ '_answer'}}"></span>
+                        <span>
+                            <input type="checkbox" id="{{ top ~ '_' ~ l ~ '_check'}}"
+                                name="{{ top ~ '_' ~ l ~ '_check'}}" style="display:none"
+                                title="Check/uncheck to accept/disallow answer" onclick="toggleAnswer(this)" />
+                        </span>
                     </td>
                     {% endfor %}
-                    <td id="{{ l ~ '_score'  }}"/>
+                    <td id="{{ l ~ '_score'  }}" />
                 </tr>
                 {% endfor %}
                 <tr>
                     <th colspan="2" scope="row">Topic Score</th>
                     {% for top in topics %}
-                    <td id="{{ top ~ '_score'}}"/>
+                    <td id="{{ top ~ '_score'}}" />
                     {% endfor %}
-                    <td id="total_score"/>
+                    <td id="total_score" />
                 </tr>
             </tbody>
         </table>
+        <input hidden id="factsWrongAnswers" name="factsWrongAnswers"/>
         {{ form.submit() }}
     </form>
-    <form>
-        <button formaction="{{url_for('index')}}">Reset Test</button>
-    </form>
     <p>
-        <button onclick="resetTimer()">Reset Timer</button>
-        <span id="timer" data-countdown="300" class="timer">5:00</div>
+        <button onclick="resetTimer('{{ timer }}')">Reset Timer</button>
+        <span id="timer" data-countdown="{{ timer * 60 }}" class="timer">{{ timer }}:00</div>
     </p>
 
 </body>

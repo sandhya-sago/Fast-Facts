@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Knowledge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h2>Admin Page</h2>
+    <form id="adminForm" action="/test" method="post" >
+        <label for="timer">Time Limit (5-100min):</label>
+        <input type="number" id="timer" name="timer" min="5" max="100" value="10"/>
+        <button type="submit">Generate test</button>
+        <fieldset class="TopicSelection">
+            <legend>Choose Topics to test (leave unselected to generate randomly)</legend>
+            {% for topic in all_topics %}
+            <div class="TopicCheckboxes">
+                <input type="checkbox" id="{{ topic }}" name="{{ topic }}" />
+                <label for="{{ topic }}">{{ topic }}</label>
+            </div>
+            {% endfor %}
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
