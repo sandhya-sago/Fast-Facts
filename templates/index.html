@@ -32,6 +32,11 @@
                     <td>
                         <span class="factInput">{{ form[top ~ '_' ~ l]() }}</span>
                         <span class="factAnswer" id="{{ top ~ '_' ~ l ~ '_answer'}}"></span>
+                        <span>
+                            <input type="checkbox" id="{{ top ~ '_' ~ l ~ '_check'}}"
+                                name="{{ top ~ '_' ~ l ~ '_check'}}" style="display:none"
+                                title="Check/uncheck to accept/disallow answer" onclick="toggleAnswer(this)" />
+                        </span>
                     </td>
                     {% endfor %}
                     <td id="{{ l ~ '_score'  }}" />
@@ -46,6 +51,7 @@
                 </tr>
             </tbody>
         </table>
+        <input hidden id="factsWrongAnswers" name="factsWrongAnswers"/>
         {{ form.submit() }}
     </form>
     <p>

@@ -33,7 +33,10 @@ def check_answers():
     answers = request.form
     expected = defaultdict(lambda: defaultdict(str))
     for item, ans in answers.items():
-        t, l = item.rsplit("_", maxsplit=1)
+        try:
+            t, l = item.rsplit("_", maxsplit=1)
+        except ValueError:
+            continue
         if len(l) != 1:
             continue
         if clean_string(ans) != facts[t][l]:
