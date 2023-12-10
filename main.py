@@ -52,7 +52,7 @@ def admin():
 @app.route("/test", methods=["POST"])
 def test():
     settings = dict(request.form)
-    timer = settings.pop("timer", "5")
+    timer = int(settings.pop("timer", "5"))
     topics = list(settings)
     if len(topics) == 0:
         topics = random.sample(all_topics, k=5)
