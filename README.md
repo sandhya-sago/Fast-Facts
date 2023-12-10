@@ -9,6 +9,8 @@ Program for Science Olypiad's "Fast Facts" event.
 
 `poetry install`
 
+OR install `flask` and `Flask-WTF` in a python environment.
+
 2) Run the application
 
 `python main.py`
@@ -18,7 +20,7 @@ Program for Science Olypiad's "Fast Facts" event.
 ## Requirements
 
 * Python 3.10.12
-* Install additional requirements from requirements.txt
+* Install additional requirements from `pyproject.toml`
 
 ## Features
 
