@@ -5,7 +5,13 @@ Program for Science Olypiad's "Fast Facts" event.
 
 ## Usage
 
-1) `python main.py`
+1) Use [poetry](https://python-poetry.org/docs/#installation) to install the environment.
+
+`poetry install`
+
+2) Run the application
+
+`python main.py`
 
 2) In your browser, go to http://localhost:5500/
 
@@ -20,3 +26,5 @@ Program for Science Olypiad's "Fast Facts" event.
 * Generate random letters
 * Formatting
 * Input and input validation
+* Selection of categories and setting the timer via the home page
+* Ability to toggle the answer correctness.
